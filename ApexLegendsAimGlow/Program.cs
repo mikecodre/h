@@ -92,7 +92,7 @@ namespace ApexLegends
                 public static readonly MenuKeyBind AimKeyTwo = new MenuKeyBind("aimkeytwo", "Aimbot HotKey2 (HOLD)", VirtualKeyCode.LeftMenu, KeybindType.Hold, false);
                 public static readonly MenuList AimType = new MenuList("aimtype", "Aimbot Type", new List<string>() { "Direct Engine ViewAngles", "Real Mouse Movement" }, 0);
                 //public static readonly MenuList AimSpot = new MenuList("aimspot", "Aimbot Spot", new List<string>() { "Aim at their Head", "Aim at their Body" }, 0);
-                public static readonly MenuKeyBind AimSpotToggle = new MenuKeyBind("aimspottoggle", "Aim Spot Toggle", VirtualKeyCode.F2, KeybindType.Toggle, true);
+                public static readonly MenuKeyBind AimSpotToggle = new MenuKeyBind("aimspottoggle", "Aim Spot Toggle", VirtualKeyCode.X, KeybindType.Toggle, true);
                 //public static readonly MenuSlider AimSpeed = new MenuSlider("aimspeed", "Aimbot Speed %", 100, 1, 100);
                 public static readonly MenuKeyBind AimSpeedToggle = new MenuKeyBind("aimspeedtoggle", "AimSpeed Toggle", VirtualKeyCode.F3, KeybindType.Toggle, true);
                 public static readonly MenuBool DrawAimSpot = new MenuBool("drawaimspot", "Draw Aimbot Spot", true);
@@ -162,7 +162,7 @@ namespace ApexLegends
         static void Main(string[] args)
         {
             Console.WriteLine("WeScript.app ApexLegends Experimental Aimbot+Glow+HWIDSpoofer!");
-            Console.WriteLine("==== Use; [F2] toggle AimSpot, [F3] toggle AimSpeed, [F4] toggle Glow!");
+            Console.WriteLine("==== Use; [X] toggle AimSpot, [F3] toggle AimSpeed, [F4] toggle Glow!");
             InitializeMenu();
             Renderer.OnRenderer += OnRenderer;
             Memory.OnTick += OnTick;
