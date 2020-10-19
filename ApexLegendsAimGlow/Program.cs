@@ -169,7 +169,7 @@ namespace ApexLegends
             Overlay.HideRenderingWindow(true); //completely hiding overlay to stay undetected on EAC
             Memory.SetTickDelay(1);
             Memory.TerminateProcess("WeScript.Loader.exe"); //close the loader because it's detected from EAC
-            DelayAction.Queue(() => LoadSpoofer(), 1000); //firstly spoof hwid
+            //DelayAction.Queue(() => LoadSpoofer(), 1000); //firstly spoof hwid
             //some chill delay of 1000ms first :)
             DelayAction.Queue(() => LoadDriver(), 2000); //second load RPM driver
         }
