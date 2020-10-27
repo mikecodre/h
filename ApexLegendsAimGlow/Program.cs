@@ -100,7 +100,7 @@ namespace ApexLegends
                 public static readonly MenuColor AimTargetColor = new MenuColor("aimtargetcolor", "Target Color", new SharpDX.Color(0x1F, 0xBE, 0xD6, 255));
                 public static readonly MenuBool DrawAimFov = new MenuBool("drawaimfov", "Draw Aimbot FOV Circle", true);
                 public static readonly MenuColor AimFovColor = new MenuColor("aimfovcolor", "FOV Color", new SharpDX.Color(255, 255, 255, 60));
-                public static readonly MenuSlider AimFov = new MenuSlider("aimfov", "Aimbot FOV", 100, 4, 1000);
+                public static readonly MenuSlider AimFov = new MenuSlider("aimfov", "Aimbot FOV", 70, 4, 1000);
             }
         }
 
@@ -556,7 +556,7 @@ namespace ApexLegends
                                                                     var Breath = new Vector3(0, 0, 0);
                                                                     Breath = StaticAngles - WritableAngles;
                                                                     var newAng = CalcAngle(myCameraPos, AimTarg3D, Breath, 1.0f, 1.0f);
-                                                                    int AimSpeedValue = Components.AimbotComponent.AimSpeedToggle.Enabled ? 100 : 15;
+                                                                    int AimSpeedValue = Components.AimbotComponent.AimSpeedToggle.Enabled ? 100 : 30;
                                                                     if (AimSpeedValue < 100) //smoothing only below 100%
                                                                     {
                                                                         float aimsmooth_ = AimSpeedValue * 0.01f;
@@ -591,7 +591,7 @@ namespace ApexLegends
                                                                     double DistY = 0;
                                                                     DistX = (AimTarg2D.X) - GameCenterPos.X;
                                                                     DistY = (AimTarg2D.Y) - GameCenterPos.Y;
-                                                                    int AimSpeedValue = Components.AimbotComponent.AimSpeedToggle.Enabled ? 100 : 15;
+                                                                    int AimSpeedValue = Components.AimbotComponent.AimSpeedToggle.Enabled ? 100 : 30;
                                                                     double slowDistX = DistX / (1.0f + (Math.Abs(DistX) / (1.0f + AimSpeedValue)));
                                                                     double slowDistY = DistY / (1.0f + (Math.Abs(DistY) / (1.0f + AimSpeedValue)));
                                                                     Input.mouse_eventWS(MouseEventFlags.MOVE, (int)slowDistX, (int)slowDistY, MouseEventDataXButtons.NONE, IntPtr.Zero);
