@@ -88,7 +88,7 @@ namespace ApexLegends
             public static class AimbotComponent
             {
                 public static readonly MenuBool AimGlobalBool = new MenuBool("enableaim", "Enable Aimbot Features", true);
-                public static readonly MenuKeyBind AimKey = new MenuKeyBind("aimkey", "Aimbot HotKey (HOLD)", VirtualKeyCode.Alt, KeybindType.Hold, false);
+                public static readonly MenuKeyBind AimKey = new MenuKeyBind("aimkey", "Aimbot HotKey (HOLD)", VirtualKeyCode.MouseXB1, KeybindType.Hold, false);
                 public static readonly MenuKeyBind AimKeyTwo = new MenuKeyBind("aimkeytwo", "Aimbot HotKey2 (HOLD)", VirtualKeyCode.LeftMenu, KeybindType.Hold, false);
                 public static readonly MenuList AimType = new MenuList("aimtype", "Aimbot Type", new List<string>() { "Direct Engine ViewAngles", "Real Mouse Movement" }, 0);
                 //public static readonly MenuList AimSpot = new MenuList("aimspot", "Aimbot Spot", new List<string>() { "Aim at their Head", "Aim at their Body" }, 0);
